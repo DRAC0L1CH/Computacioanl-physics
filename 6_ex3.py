@@ -10,7 +10,7 @@ def monte_carlo(f, a, b, n):
 
 
 def f(t):
-    return  10*np.exp(-t)*np.sin(2*np.pi*t)
+    return  (10*np.exp(-t)*np.sin(2*np.pi*t))
 
 
 def simpson(f, a, b, n):
