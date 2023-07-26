@@ -3,17 +3,9 @@ import time
 
 
 def monte_carlo(f, a, b, n):
-   
-    subsets = np.arange(0,n+1,n/10)
-    u = np.zeros(n)
-    for i in range(10):
-        start = int(subsets[i])
-        end = int(subsets[i+1])
-        u[start:end] = np.random.uniform(low=i/10,high=(i+1)/10,size=end-start)
-    np.random.shuffle(u)
-    u_func = f(a+(b-a)*u)
-    s = ((b-a)/n)*u_func.sum()
-    
+    u = np.random.uniform(low=a, high=b, size=n)
+    u_func = f(u)
+    s = ((b - a) / n) * u_func.sum()
     return s
 
 def f(t):
@@ -48,3 +40,4 @@ start_time = time.time()
 result = monte_carlo(f, a, b, n)
 monte_carlo_time = time.time() - start_time
 print(f"Integral pelo método de Monte Carlo: {result:.5f}, tempo: {monte_carlo_time:.5f}s")
+
