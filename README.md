@@ -86,3 +86,5 @@ Uses the previous program and applies it to a data set from a data base.
 
 ### 11
 Access a data base with data from the courteau99 to demonstrate the Tuly-Fisher relation. Plots the selected data, determines the parameters of the best line, join the line to the graph, determine the correlation coefficient, test the hypothesis of a correlation with cofident level of 95% and determine the error of the slope factor with  95% confident level. 
+
+### 12
